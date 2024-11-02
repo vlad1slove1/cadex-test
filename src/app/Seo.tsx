@@ -19,14 +19,16 @@ const Seo: React.FC<SeoProps> = ({ title, description, openGraph, favicon }) => 
             <link rel="icon" href={favicon} />
             <title>{pageTitle}</title>
             <meta name="description" content={pageDescription} />
-            <meta property="og:title" content={openGraph?.title || pageTitle} />
-            <meta property="og:description" content={openGraph?.description || pageDescription} />
+            <meta property="og:title" content={openGraph?.title} />
+            <meta property="og:description" content={openGraph?.description} />
             <meta property="og:url" content={openGraph?.url} />
-            <meta property="og:site_name" content={openGraph?.siteName || siteConfig.name} />
-            <meta property="og:type" content={openGraph?.type || 'website'} />
-            {openGraph?.images.map((image, index) => (
-                <meta key={index} property="og:image" content={image.url} />
-            ))}
+            <meta property="og:site_name" content={openGraph?.siteName} />
+            <meta property="og:image" content={openGraph?.images[0].url} />
+            <meta property="og:image:secure_url" content={openGraph?.images[0].secureUrl} />
+            <meta property="og:image:width" content={openGraph?.images[0].width} />
+            <meta property="og:image:height" content={openGraph?.images[0].height} />
+            <meta property="og:image:alt" content={openGraph?.images[0].alt} />
+            <meta property="og:type" content={openGraph?.type} />
         </Head>
     );
 };

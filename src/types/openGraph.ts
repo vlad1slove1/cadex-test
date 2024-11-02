@@ -1,8 +1,8 @@
 export type OpenGraphImage = {
     url: string;
     secureUrl: string;
-    width: number;
-    height: number;
+    width: string;
+    height: string;
     alt: string;
 };
 

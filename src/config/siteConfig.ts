@@ -92,8 +92,8 @@ const siteConfig: Props = {
                 url: 'https://raw.githubusercontent.com/gitdagray/my-blogposts/main/images/og-card.png',
                 secureUrl:
                     'https://raw.githubusercontent.com/gitdagray/my-blogposts/main/images/og-card.png',
-                width: 1200,
-                height: 630,
+                width: '1200',
+                height: '630',
                 alt: 'Preview image for Important Inc.',
             },
         ],
