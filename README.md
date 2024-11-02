@@ -1,4 +1,5 @@
 # Important Inc. Website
+### [demo link](https://cadex-test-self.vercel.app/)
 
 ## Overview
 Important Inc. showcases its offerings through a two-page website built with **Next.js**, emphasizing speed, scalability, and user experience. The website features a main page with an embedded YouTube video and a contact page with a form that sends messages to the backend.
@@ -53,7 +54,7 @@ This project can be deployed on platforms like **Netlify**, **Vercel**, or **AWS
 The backend service is a serverless function capable of sending message and responding with a message.
 
 ## Additional Features
-- **Social Media Preview**: Open Graph and Twitter Card meta tags are implemented for improved visibility on social media platforms.
+- **Social Media Preview**: Open Graph and Twitter Card meta tags are implemented for improved visibility on social media platforms. Link to scan: [opengraph](https://www.opengraph.xyz/url/https%3A%2F%2Fcadex-test-self.vercel.app)
 
 ## Acknowledgements
 Thank you for reviewing my project. For any questions or further clarifications, feel free to reach out.
