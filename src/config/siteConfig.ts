@@ -5,23 +5,26 @@ import { Home, Mail, Phone } from '@/components/Icons';
 import type { NavItem } from '@/styles/navItem';
 import type { ContactItem } from '@/types/contactItem';
 import type { CardData } from '@/types/cardData';
-import type { OpenGraph, Twitter } from '@/types/socialMediaTag';
+import type { OpenGraph } from 'next/dist/lib/metadata/types/opengraph-types';
+import type { Twitter } from 'next/dist/lib/metadata/types/twitter-types';
 
 type Props = {
     name: string;
     description: string;
+    baseUrl: string;
     content: Map<ContentKey, string>;
     cards: CardData[];
     navigation: NavItem[];
     contacts: ContactItem[];
-    openGraph: OpenGraph;
-    twitter: Twitter;
+    openGraph: OpenGraph & { type: 'website' };
+    twitter: Twitter & { card: 'summary_large_image' };
 };
 
 const siteConfig: Props = {
     name: 'Important Inc.',
     description:
         'Important Inc. showcases its offerings through a Next.js-based website, emphasizing speed and scalability',
+    baseUrl: 'https://cadex-test-self.vercel.app/',
     content: new Map([
         [ContentKey.LOGO_IMAGE_SRC, '/logo.png'],
         [ContentKey.LOGO_IMAGE_ALT, 'Important Inc. logo'],
@@ -88,15 +91,24 @@ const siteConfig: Props = {
         type: 'website',
         title: 'Important Inc.',
         description: "Hello, we're Important Inc. 👋 We're creating sites on next.",
-        image: 'https://nextui.org/images/hero-card.jpeg',
+        images: [
+            {
+                url: 'https://nextui.org/images/hero-card.jpeg',
+                secureUrl: 'https://nextui.org/images/hero-card.jpeg',
+                width: 526,
+                height: 526,
+                alt: 'Preview image Importan Inc.',
+            },
+        ],
     },
     twitter: {
-        url: 'https://cadex-test-self.vercel.app/',
-        domain: 'cadex-test-self.vercel.app',
+        card: 'summary_large_image',
         title: 'Important Inc.',
         description: "Hello, we're Important Inc. 👋 We're creating sites on next.",
-        image: 'https://nextui.org/images/hero-card.jpeg',
-        card: 'summary',
+        images: {
+            url: 'https://nextui.org/images/hero-card.jpeg',
+            alt: 'Preview image Importan Inc.',
+        },
     },
 };
 
