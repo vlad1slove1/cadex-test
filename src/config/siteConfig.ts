@@ -84,7 +84,7 @@ const siteConfig: Props = {
     openGraph: {
         title: 'Important Inc.',
         description: "Hello, we're Important Inc. 👋 We're creating sites on next.",
-        url: 'https://www.davegray.codes/',
+        url: 'https://cadex-test-self.vercel.app/',
         siteName: 'Important Inc.',
         type: 'website',
         images: [
