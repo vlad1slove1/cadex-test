@@ -1,10 +1,11 @@
 import { ContentKey, Path } from '@/lib/enums';
 import util from '@/lib/util';
-import { CardData } from '@/types/cardData';
-import { NavItem } from '@/styles/navItem';
-import { ContactItem } from '@/types/contactItem';
 import { Home, Mail, Phone } from '@/components/Icons';
-import { OpenGraph } from '@/types/openGraph';
+
+import type { NavItem } from '@/styles/navItem';
+import type { ContactItem } from '@/types/contactItem';
+import type { CardData } from '@/types/cardData';
+import type { OpenGraph, Twitter } from '@/types/socialMediaTag';
 
 type Props = {
     name: string;
@@ -14,6 +15,7 @@ type Props = {
     navigation: NavItem[];
     contacts: ContactItem[];
     openGraph: OpenGraph;
+    twitter: Twitter;
 };
 
 const siteConfig: Props = {
@@ -82,21 +84,19 @@ const siteConfig: Props = {
         { label: '+1 234 567 890', href: util.mailtoOrTel('+1234567890'), icon: Phone },
     ],
     openGraph: {
+        url: 'https://cadex-test-self.vercel.app/',
+        type: 'website',
         title: 'Important Inc.',
         description: "Hello, we're Important Inc. 👋 We're creating sites on next.",
+        image: 'https://nextui.org/images/hero-card.jpeg',
+    },
+    twitter: {
         url: 'https://cadex-test-self.vercel.app/',
-        siteName: 'Important Inc.',
-        type: 'website',
-        images: [
-            {
-                url: 'https://raw.githubusercontent.com/gitdagray/my-blogposts/main/images/og-card.png',
-                secureUrl:
-                    'https://raw.githubusercontent.com/gitdagray/my-blogposts/main/images/og-card.png',
-                width: '1200',
-                height: '630',
-                alt: 'Preview image for Important Inc.',
-            },
-        ],
+        domain: 'cadex-test-self.vercel.app',
+        title: 'Important Inc.',
+        description: "Hello, we're Important Inc. 👋 We're creating sites on next.",
+        image: 'https://nextui.org/images/hero-card.jpeg',
+        card: 'summary',
     },
 };
 
