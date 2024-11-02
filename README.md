@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Important Inc. Website
 
-## Getting Started
+## Overview
+Important Inc. showcases its offerings through a two-page website built with **Next.js**, emphasizing speed, scalability, and user experience. The website features a main page with an embedded YouTube video and a contact page with a form that sends messages to the backend.
 
-First, run the development server:
+## Technologies Used
+- **Frontend**: React, Next.js (TypeScript)
+- **Styling**: Styled-components, Tailwind CSS
+- **Component Library**: NextUI
+- **State Management**: Context API
+- **Backend**: Node.js (serverless functions)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Dependencies
+- `@nextui-org/react`
+- `styled-components`
+- `framer-motion`
+- `next-themes`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+- **Responsive Design**: The website is responsive and adapts to different screen sizes.
+- **Sticky Header and Footer**: Both pages feature a sticky header and footer for easy navigation.
+- **Embedded YouTube Video**: The main page includes an embedded video from YouTube.
+- **Contact Form**: The contact page features a required form that captures user information.
+- **Backend Integration**: The form submission sends data to the backend, which logs the data and responds with a thank-you message.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setup Instructions
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/important-inc.git
+    cd important-inc
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-## Learn More
+3. Run the development server:
+    ```bash
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+## Hosting
+This project can be deployed on platforms like **Netlify**, **Vercel**, or **AWS**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Styling and Performance
+- **Styled-components** are used for component-level styles, allowing for scoped CSS and theme management.
+- **Tailwind CSS** is used for utility-first styling, providing a flexible and responsive design approach.
+- **NextUI** components enhance the UI with pre-styled components, ensuring a polished and professional look.
+- **SEO** and performance practices are followed, including proper heading hierarchy and accessibility considerations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Assumptions Made
+The backend service is a serverless function capable of sending message and responding with a message.
 
-## Deploy on Vercel
+## Additional Features
+- **Social Media Preview**: Open Graph and Twitter Card meta tags are implemented for improved visibility on social media platforms.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgements
+Thank you for reviewing my project. For any questions or further clarifications, feel free to reach out.
